@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link href="style.css" rel="stylesheet" />
+    <title>ระบบเก็บข้อมูลการประกาศ</title>
+</head>
+
+<body class="text-center">
+    <iframe name="hiddenFrame" width="0" height="0" style="display: none;"></iframe>
+    <main class="form-signin">
+        
+        <form id="updateForm" method="POST" class="needs-validation" novalidate action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScBP3_jSacZ3JqFoqzWZyBazTgS6hn0tdt2gicyvcTrYge9fQ/formResponse" target="hiddenFrame">
+
+            <h1 class="h5 m-0 fw-bold"><i class="bi bi-database-fill"></i> ระบบเก็บข้อมูลการประกาศ</h1>
+            <p class="subTitle m-0">ทีมประกาศคริสตจักรฮิมภูพิงค์</p>
+            <hr />
+            <div class="row">
+                <div class="col-sm-12 pb-2 pt-2 flex-split">
+                    <div class="form-flex flex-2">
+                        <label for="Name" class="form-label header">ชื่อเล่น <span class="text-gray fs-7"></span></label>
+                        <input id="Name" type="text" class="form-control w-150px" placeholder="ระบุชื่อเล่น" required
+                            name="entry.1233631664" />
+                    </div>
+                    <div class="form-flex flex-1">
+                        <label for="Date" class="form-label header">วันที่ประกาศ</label>
+                        <input id="Date" class="form-control w-140px" type="date" required placeholder="Date" onclick="this.showPicker()"
+                            name="entry.1075436751"/>
+                    </div>
+
+                </div>
+
+                <!-- <div class="col-sm-6 pb-2 pt-2">
+                    <label for="Date" class="form-label">วันที่ประกาศ</label>
+                    <input id="Date" class="form-control" type="date" required name="Date" onclick="this.showPicker()"/>
+                </div> -->
+
+                <!-- <div class="col-sm-12 pb-2 pt-2">
+                    <label for="attach" class="form-label">แนบสลิป</label>
+                    <input id="attach" type="file" class="form-control" name="attach" required accept="image/*" />
+                </div> -->
+
+
+                
+                <!-- <div class="col-sm-12 pb-2 pt-2">
+                    <label for="Type" class="form-label">ประเภทการถวาย</label>
+                    <select id="Type" class="form-select" required name="Type">
+                        <option value="" selected disabled>กรุณาเลือก</option>
+                        <option value="สิบลด">สิบลด</option>
+                        <option value="สถานนมัสการ">สถานนมัสการ</option>
+                        <option value="พันธกิจ">พันธกิจ</option>
+                        <option value="ของขวัญพระเยซู">ของขวัญพระเยซู</option>
+                    </select>
+                </div> -->
+
+                
+                <div class="col-sm-12 pb-2 pt-2 left">
+                    <div>
+                        <label class="header">สถานภาพ</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="entry.1852781820" id="inlineRadio1" value="นักเรียน" required>
+                        <label class="form-check-label" for="inlineRadio1">นักเรียน</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="entry.1852781820" id="inlineRadio2" value="นักศึกษา" required>
+                        <label class="form-check-label" for="inlineRadio2">นักศึกษา</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="entry.1852781820" id="inlineRadio3" value="คนทำงาน" required>
+                        <label class="form-check-label" for="inlineRadio3">คนทำงาน</label>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12 pb-2 pt-2 left">
+                    <label class="header">การประกาศ</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="entry.567051621" value="แจกใบปลิวเฉยๆ" id="check1">
+                        <label class="form-check-label" for="check1">แจกใบปลิวเฉยๆ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="entry.567051621" value="สร้างสัมพันธ์ / พูดคุยทั่วไป" id="check2">
+                        <label class="form-check-label" for="check2">สร้างสัมพันธ์ / พูดคุยทั่วไป</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="entry.567051621" value="พระกิตติคุณครบ" id="check3">
+                        <label class="form-check-label" for="check3">พระกิตติคุณครบ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="entry.567051621" value="คำพยาน" id="check4">
+                        <label class="form-check-label" for="check4">คำพยาน</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="entry.567051621" value="อธเผื่อ" id="check5">
+                        <label class="form-check-label" for="check5">อธเผื่อ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="entry.567051621" value="ชวนมาคจ." id="check6">
+                        <label class="form-check-label" for="check6">ชวนมาคจ.</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="entry.567051621" value="นำรับเชื่อ" id="check7">
+                        <label class="form-check-label" for="check7">นำรับเชื่อ</label>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 pb-2 pt-2 left">
+                    <div>
+                        <label class="header">ท่าที</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="entry.556549195" id="response1" value="ไม่ระบุ" required>
+                        <label class="form-check-label" for="response1">ไม่ระบุ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="entry.556549195" id="response2" value="ปฏิเสธ" required>
+                        <label class="form-check-label" for="response2">ปฏิเสธ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="entry.556549195" id="response3" value="ท่าทีเฉยๆ" required>
+                        <label class="form-check-label" for="response3">ท่าทีเฉยๆ</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="entry.556549195" id="response4" value="รับฟังดี" required>
+                        <label class="form-check-label" for="response4">รับฟังดี</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="entry.556549195" id="response5" value="ตอบรับมาคริสตจักร" required>
+                        <label class="form-check-label" for="response5">ตอบรับมาคริสตจักร</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="entry.556549195" id="response6" value="รับเชื่อ" required>
+                        <label class="form-check-label" for="response6">รับเชื่อ</label>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 pb-2 pt-2">
+                    <label for="by" class="form-label header">ประกาศโดย<span class="text-gray fs-7"></span></label>
+                    <input id="by" type="text" class="form-control" placeholder="ระบุชื่อเล่น" name="entry.710282872" required
+                        name="by" />
+                </div>
+
+                <div class="col-sm-12 pb-2 pt-2 left">
+                    <div>
+                        <label class="header">ข้อมูลการติดต่อ</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="entry.567912886" id="contact1" value="ได้" required>
+                        <label class="form-check-label" for="contact1">ได้</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="entry.567912886" id="contact2" value="ไม่ได้" required>
+                        <label class="form-check-label" for="contact2">ไม่ได้</label>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-12 pb-2 pt-2 left form-split" id="contact_form" style="display:none">
+                    <select onchange="updateContact()" id="platform" class="form-select form-select-contact" name="platform">
+                        <option value="" selected disabled>โปรดเลือก</option>
+                        <option value="FB">Facebook</option>
+                        <option value="IG">IG</option>
+                        <option value="Line">Line</option>
+                        <option value="Tel">Tel.</option>
+                        <option value="etc">อื่น ๆ</option>
+                    </select>
+                    <input oninput="updateContact()" id="contact_detail" type="text" class="form-control" placeholder="ระบุข้อมูลการติดต่อ" disabled>
+                    
+                    
+                </div>
+                <input type="hidden" id="contact_value" name="entry.801956970"/>
+                <div class="col-sm-12 pb-2 pt-2">
+                    <label for="addition" class="form-label header">รายละเอียดเพิ่มเติม<span class="text-gray fs-7"></span></label>
+                    <input id="addition" type="text" class="form-control" placeholder="ชั้นปี / คณะ / อาชีพ / ความสนใจพิเศษ" required
+                        name="entry.1502758080" />
+                </div>
+
+            </div>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="w-100 mt-3 btn btn-lg btn-primary" onclick="validateForm()">
+                ส่งข้อมูล
+            </button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="confirm_submit" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">ยืนยันการบันทึกข้อมูล</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <span class="fs-5">ท่านต้องการบันทึกข้อมูลหรือไม่ ?</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">ยกเลิก</button>
+                            <button id="submitBtn" class="btn btn-lg btn-success" type="submit">
+                                ยืนยัน
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </form>
+    </main>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="swal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script>
+
+        function validateForm() {
+
+            
+
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated')
+                } else {
+                    form.classList.remove('was-validated')
+                    $('#confirm_submit').modal('show');
+                }
+            })
+            
+
+        }
+
+
+        $(document).ready(function(){
+            $("#submitBtn").on('click', function(){
+                let timerInterval;
+                Swal.fire({
+                    title: "กำลังบันทึกข้อมูล",
+                    timer: 2000,
+                    timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading();
+                        timerInterval = setInterval(() => {
+                        }, 100);
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval);
+                    }
+                }).then((result) => {
+                    Swal.fire({
+                        title: "บันทึกข้อมูลสำเร็จ",
+                        icon: "success",
+                        timer: 1000,
+                        showCancelButton: false,
+                        showConfirmButton: false
+                    }).then(function () {
+                        window.location = "index.html";
+                        window.location.href = "index.html";
+                    });
+                });
+            });
+        });
+        
+    </script>
+
+
+
+
+    <script>
+        function updateContact(){
+            $("#contact_value").val($("#platform").val()+": "+$("#contact_detail").val());
+        }
+
+
+        $(function(){
+            $('input:radio').change(function(){
+                var radioVal = $(this).val();
+                if (radioVal == "ได้") {
+                    $("#contact_form").css("display", "");
+                    $("#contact_value").val("");
+                    $('#platform').val("");
+                    $('#contact_detail').val("");
+                    $('#platform').attr('required', true);
+                    $('#contact_detail').attr('required', true);
+                } else {
+                    $("#contact_form").css("display", "none");
+                    $("#contact_value").val("");
+                    $('#platform').val("");
+                    $('#contact_detail').val("");
+                    $('#platform').removeAttr('required');
+                    $('#contact_detail').removeAttr('required');
+                }
+            });
+
+            $('#platform').change(function(){
+                console.log($("#platform").val());
+                $("#contact_detail").removeAttr('disabled');
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
